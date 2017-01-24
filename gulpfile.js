@@ -9,10 +9,15 @@ var imagemin = require('gulp-imagemin');
 var del = require('del');
 var runSequence = require('run-sequence');
 var autoprefixer = require('gulp-autoprefixer');
+var cleanCSS = require('gulp-clean-css');
 
-gulp.task('hello', function() {
-  console.log('Hello Zell');
+
+gulp.task('minify-css', function() {
+  return gulp.src('css/*.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('dist'));
 });
+
 
 gulp.task('sass', function(){
   return gulp.src('app/sass/**/*.sass')
@@ -48,9 +53,9 @@ gulp.task('useref', function(){
 gulp.task('useref', function(){
   return gulp.src('app/*.html')
     .pipe(useref())
-    .pipe(gulpIf('*.js', uglify()))
+    .pipe(gulpIf('app/js/*.js', uglify()))
     // Minifies only if it's a CSS file
-    .pipe(gulpIf('*.css', cssnano()))
+    .pipe(gulpIf('app/css/*.css', cssnano()))
     .pipe(gulp.dest('dist'))
 });
 
@@ -87,14 +92,7 @@ gulp.task('watch', ['browserSync', 'sass'], function(){
   gulp.watch('app/js/**/*.js', browserSync.reload); 
 })
 
-gulp.task('sass', function() {
-  return gulp.src('app/sass/**/*.sass') // Gets all files ending with .scss in app/scss
-    .pipe(sass())
-    .pipe(gulp.dest('app/css'))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
-});
+
 
 gulp.task('build', function (callback) {
   runSequence('clean:dist', 
