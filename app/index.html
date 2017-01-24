@@ -1,12 +1,300 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html lang="">
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Test FrontEnd zadatak | gecko.rs</title>
-    
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+	<header>
+	<nav class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+	        <button type="button" class="navbar-toggle btn-burger" data-toggle="collapse" data-target="#myNavbar">
+				<div class='burger'>
+					<div class='burger__line-top'></div>
+				    <div class='burger__line-mid'></div>
+				    <div class='burger__menu'>
+			      		<p>MENU</p>
+			  		</div>
+	    		</div>
+			 </button>
+			 <a class="navbar-brand" href="http://nemanjakostic.com/Portfolio/" target="_blank"></a>
+        </div>
+        <div class="navbar-collapse collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right navigation-links">
+              <li><a href="#jQuery">Slider jQuery</a></li>
+              <li><a href="#CSS">Slide CSS</a></li>
+              <li><a href="#forms">Forms</a></li>
+              <li><a href="#buttonStar">ButtonStar</a></li>
+       		</ul>
+     	 </div>
+  </div>
+    </nav>
+	</header>
+	<div class="container">
+	  	<div class="row">
+	    	<div class="col-sm-10">
+				<div class="jumbotron">
+					<h1>Welcome to my APP</h1>
+					<h2 id="jQuery">This is jQuery Slider</h2>
+			    
 
 
+					<div class="sliderContainer">
+          				<p>To <em>pause</em> the Slider just hover mouse on the image</p>
+			            <div id="slider">
+			                <ul class="slides">
+			                    <li class="slide">
+			                        <div class="caption">
+			                            <h2>jQuery Slider</h2>
+			                            <p>
+			                                This is slide 1
+			                            </p>
+			                        </div>
+			                      <img src="images/1.jpg" alt="Slide 1"></li>
+			                    <li class="slide">
+			                        <div class="caption">
+			                            <h2>jQuery Slider</h2>
+			                            <p>
+			                                This is slide 2
+			                            </p>
+			                        </div>
+			                      <img src="images/2.jpg" alt="Slide 2"></li>
+			                    <li class="slide">
+			                        <div class="caption">
+			                            <h2>jQuery Slider</h2>
+			                            <p>
+			                                This is slide 3
+			                            </p>
+			                        </div>
+			                      <img src="images/3.jpg" alt="Slide 3"</li>
+			                    <li class="slide">
+			                        <div class="caption">
+			                            <h2>jQuery Slider</h2>
+			                            <p>
+			                                This is slide 4
+			                            </p>
+			                        </div>
+			                      <img src="images/4.jpg" alt="Slide 4"</li>
+
+			                    <li class="slide">
+			                        <div class="caption">
+			                            <h2>jQuery Slider</h2>
+			                            <p>
+			                                This is slide 1
+			                            </p>
+			                        </div>
+			                      <img src="images/1.jpg" alt="Slide 1"></li>
+			                </ul>
+			                
+			                
+			            </div>
+			            <div class="directions clearfix">
+			                <span class="left"></span>
+			            </div>
+			            <div class="directions">
+			                <span class="right"></span>
+			            </div>
+			          <div class="bullets">
+			                <span class="bullet active" id="bullet1" data-image="4" data-slide="1"></span>
+			                <span class="bullet" id="bullet2" data-image="5" data-slide="2"></span>
+			                <span class="bullet" id="bullet3" data-image="6" data-slide="3"></span>
+			                <span class="bullet" id="bullet4" data-image="7" data-slide="4"></span>
+			            </div>
+			          </div>
+
+
+
+
+
+	     
+	    		</div>
+			</div>
+			<div class="col-sm-2">
+				<h3>This app runs on:</h3>
+				<p>Build system: <code>gulp</code></p>
+				<p>version control system: <code>git</code></p>
+				<p>package manager : <code>bower</code></p>
+				<p>javascript framework : <code>jQuery</code></p>
+				<p>CSS extension: <code>SASS</code></p>
+				<p>grid system : <code>bootstrap</code></p>
+				<p>it`s mobile-first and responsive</p>
+			</div>
+		</div><!--end of row-->
+	</div><!--end of container-->
+
+	<section>
+		<div class="container">
+			<h2 id="CSS">This is CSS Slider</h2>
+			<div id="slider1" class="csslider infinity">
+			  <input type="radio" name="slides" id="slides_1">
+			  <input type="radio" name="slides" checked="checked" id="slides_2">
+			  <input type="radio" name="slides" id="slides_3">
+			  <input type="radio" name="slides" id="slides_4">
+			  <ul>
+			    <li>
+			    	<div class="caption">
+			    		<h1>CSS Slider</h1>
+			    		<h3>This is Slide 1</h3>
+			    	</div>
+			    </li>
+			    <li>
+			      <div class="caption">
+		    		<h1>CSS Slider</h1>
+		    		<h3>This is Slide 2</h3>
+			    	</div>
+			    </li>
+			    <li>
+			      	<div class="caption">
+			    		<h1>CSS Slider</h1>
+			    		<h3>This is Slide 3</h3>
+			    	</div>
+			    </li>
+			     <li>
+			      <div class="caption">
+			    		<h1>CSS Slider</h1>
+			    		<h3>This is Slide 4</h3>
+			    	</div>
+			    </li>
+			  </ul>
+			  <div class="arrows">
+			    <label for="slides_1"></label>
+			    <label for="slides_2"></label>
+			    <label for="slides_3"></label>
+			    <label for="slides_4"></label>
+			    <label for="slides_1" class="goto-first"></label>
+			    <label for="slides_4" class="goto-last"></label>
+			  </div>
+			  <div class="navigation">
+			    <div>
+			      <label for="slides_1"></label>
+			      <label for="slides_2"></label>
+			      <label for="slides_3"></label>
+			      <label for="slides_4"></label>
+			    </div>
+			  </div>
+			</div>
+
+		</div><!--end of container-->
+	</section>
+	<section>
+		<div class="container">
+			<h2 class="text-center" id="forms">Forms</h2>
+			<ul class="nav nav-tabs">
+			    <li class="active"><a data-toggle="tab" href="#form1">Register</a></li>
+			    <li><a data-toggle="tab" href="#form2">Autocomplete</a></li>
+			    <li><a data-toggle="tab" href="#form3">HTML5 Pattern</a></li>
+			  </ul>
+
+			<div class="tab-content">
+			    <div id="form1" class="tab-pane fade in active">
+			    <h3>Please register yourself</h3>
+
+     			<div id="successMessage">Congratulations! Registration was successful.</div>
+
+    			<div id="errorMessage"></div>
+
+    			<div class="form-element">
+	      			<label for="email">Email</label>
+	      			<input type="text" name="email" id="email" placeholder="example@example.com">
+	      			<code id="errorEmail"></code>
+    			</div>
+
+			    <div class="form-element">
+				    <label for="Phone">Phone</label>
+				    <input type="text" name="phone" id="phone" placeholder="0123456789">
+				    <code id="errorPhone"></code>
+			    </div>
+
+			    <div class="form-element">
+				    <label for="password">Password</label>
+				    <input type="password" name="password" id="password">
+			    </div>
+
+			    <div class="form-element">
+				    <label for="passwordConfirm">Confirm Password</label>
+				    <input type="password" name="passwordConfirm" id="passwordConfirm">
+			    </div>
+
+			    <div class="form-element">
+			    	<input type="submit" id="submitButton" value="Sign Up">
+			    </div>
+			</div>
+		    <div id="form2" class="tab-pane fade">
+		      <h3>Find your contry or city</h3>
+		      <div id="continput">
+		      	<div id="input-group">
+					<input type="text" id="searchtext">
+				</div>
+			</div>
+			<ul id="results"></ul>
+			<div id="header"></div>
+		        
+		    </div>
+    <div id="form3" class="tab-pane fade">
+       <h3>HTML5 pattern form</h3>
+
+    	<form method="post">
+			<div>
+				<label>Name : </label>
+				<input type="text" placeholder="letters only / no space" pattern="[A-Za-z]+" title="only letters" required />
+			</div>
+
+			<div>
+				<label>E-mail : </label>
+				<input type="email" placeholder="example@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="example@example.com" required />
+			</div>
+
+			<div>
+				<label>website : </label>
+				<input type="url"  placeholder="http://nemanjakostic.com/Portfolio/"pattern="https?://.+" title="http://nemanjakostic.com/Portfolio/" required />
+			</div>
+
+			<div>
+				<label>pin code : </label>
+				<input type="text" placeholder="only numbers" pattern="[0-9]+" title="numbers only" required />
+			</div>
+
+			<div>
+				<label>password : </label>
+				<input type="password" placeholder="at least 6 characters" pattern=".{6,}" title="Six or more characters" required />
+			</div>
+
+			<div>
+				<label>phone no : </label>
+				<input type="tel" placeholder="10 digits" pattern="^\d{10}$" title="10 numeric characters only" required />
+			</div>
+			<br>
+			<input type="submit">
+		</form>
+
+
+   
+    </div>
+    </div>
+  </div>
+		</div>
+	</section>
+	<section>
+		<div class="text-center" id="buttonStar"> 
+			<h3>when you click button above i`ll fire AJAX request</h3>
+			<button class="zvezdica"><span id="star-five"></span>checkout<span id="star-five"></span></button>
+			<div class="showContent"></div>
+		</div>
+	</section>
+	<footer>
+		<div class="container-inverse">
+		<p class="text-center"><small>Created NemanjaKostic2017</small></p>
+		</div>
+	</footer>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

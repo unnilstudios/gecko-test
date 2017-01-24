@@ -1,0 +1,83 @@
+
+.sliderContainer
+  max-width: 720px
+  background-color: $black
+  border: 8px solid $black
+
+  p
+    padding: 10px 5px 0
+    color: white
+#slider
+  max-width: 720px
+  height: auto
+  overflow: hidden
+  .slides
+    width: 3600px
+    height: auto
+    margin: 0
+    padding: 0
+  .slide
+    float: left
+    list-style: none
+    width: 720px
+    height: auto
+    position: relative
+
+    img
+      width: 100%
+      vertical-align: middle
+      height: auto
+  .caption
+    background-color: rgba(62, 224, 44, 0.3)
+    max-width: 720px
+    width: 100%
+    position: absolute
+    bottom: 0
+    left: 0
+    text-align: left
+    color: white
+    font-size: .8em
+    padding-left: 20px
+    text-transform: none
+
+/* Directions */
+
+.directions
+  .left
+    width: 25px
+    height: 25px
+    border-top: 4px solid $green
+    border-left: 4px solid $green
+    margin-top: -180px
+    margin-left: 20px
+    transform: rotate(-45deg)
+    float: left
+    cursor: pointer
+    z-index: 99
+  .right
+    width: 25px
+    height: 25px
+    border-top: 4px solid $green
+    border-right: 4px solid $green
+    margin-top: -180px
+    margin-right: 20px
+    transform: rotate(45deg)
+    float: right
+    cursor: pointer
+    z-index: 99
+
+/* Bullets */
+
+.bullets
+  margin: 10px auto
+  text-align: center
+  .bullet
+    width: 12px
+    height: 12px
+    border: 1px solid black
+    border-radius: 50%
+    background-color: white
+    display: inline-block
+    cursor: pointer
+  .active, .bullet:hover
+    background-color: $green

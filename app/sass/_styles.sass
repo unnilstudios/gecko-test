@@ -1,0 +1,50 @@
+header
+	position: relative
+
+
+.navbar
+	min-height: 81px
+
+.navbar-brand
+	background-image: url('../images/logo-mob.png')
+	width: 203px
+	height: 70px
+	position: absolute
+    top: 50%
+    margin-top: -35px
+
+.btn-burger
+	width: 52px
+	height: 64px
+	background-color: $black2
+
+.navigation-links
+	
+	li
+		width: 100%
+		display: block
+		padding: 5px 10px
+		cursor: pointer
+		transition:  0.2s
+
+		a
+			padding: 0
+
+
+@media screen and (min-width:768px)
+	.navbar-brand
+		background-image: url('../images/logo.png')
+		width: 344px
+
+	.navigation-links
+		padding-top: 0
+
+		li
+			width: auto
+			display: inline-block
+			padding: 30px 20px
+			color: $green
+			cursor: pointer
+			transition:  0.2s
+			&:hover
+				color: white
