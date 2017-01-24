@@ -10,12 +10,12 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var autoprefixer = require('gulp-autoprefixer');
 var cleanCSS = require('gulp-clean-css');
-
+var build = require('gulp-build');
 
 gulp.task('minify-css', function() {
   return gulp.src('css/*.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/css/*.css'));
 });
 
 
@@ -28,6 +28,8 @@ gulp.task('sass', function(){
     }))
 });
 
+
+
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {
@@ -36,26 +38,13 @@ gulp.task('browserSync', function() {
   })
 })
 
-gulp.task('useref', function(){
-  return gulp.src('app/*.html')
-    .pipe(useref())
-    .pipe(gulp.dest('dist'))
-});
 
 gulp.task('useref', function(){
   return gulp.src('app/*.html')
     .pipe(useref())
-    // Minifies only if it's a JavaScript file
     .pipe(gulpIf('*.js', uglify()))
-    .pipe(gulp.dest('dist'))
-});
-
-gulp.task('useref', function(){
-  return gulp.src('app/*.html')
-    .pipe(useref())
-    .pipe(gulpIf('app/js/*.js', uglify()))
     // Minifies only if it's a CSS file
-    .pipe(gulpIf('app/css/*.css', cssnano()))
+    .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
 });
 
@@ -96,7 +85,7 @@ gulp.task('watch', ['browserSync', 'sass'], function(){
 
 gulp.task('build', function (callback) {
   runSequence('clean:dist', 
-    ['sass', 'useref', 'images'],
+    ['sass', 'useref', 'images', 'minify-css'],
     callback
   )
 })
