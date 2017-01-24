@@ -2,7 +2,7 @@
 <html lang="">
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ 	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
     <title>Test FrontEnd zadatak | gecko.rs</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,10 +11,10 @@
 </head>
 <body>
 	<header>
-	<nav class="navbar navbar-inverse" role="navigation">
+	<nav class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
-	        <button type="button" class="navbar-toggle btn-burger" data-toggle="collapse" data-target="#myNavbar">
+	        <div class="navbar-toggle btn-burger" data-toggle="collapse" data-target="#myNavbar">
 				<div class='burger'>
 					<div class='burger__line-top'></div>
 				    <div class='burger__line-mid'></div>
@@ -22,7 +22,7 @@
 			      		<p>MENU</p>
 			  		</div>
 	    		</div>
-			 </button>
+			 </div>
 			 <a class="navbar-brand" href="http://nemanjakostic.com/Portfolio/" target="_blank"></a>
         </div>
         <div class="navbar-collapse collapse" id="myNavbar">
@@ -56,7 +56,7 @@
 			                                This is slide 1
 			                            </p>
 			                        </div>
-			                      <img src="images/1.jpg" alt="Slide 1"></li>
+			                      <img src="images/1.jpg" alt="Slide1">
 			                    <li class="slide">
 			                        <div class="caption">
 			                            <h2>jQuery Slider</h2>
@@ -64,7 +64,7 @@
 			                                This is slide 2
 			                            </p>
 			                        </div>
-			                      <img src="images/2.jpg" alt="Slide 2"></li>
+			                      <img src="images/2.jpg" alt="Slide2">
 			                    <li class="slide">
 			                        <div class="caption">
 			                            <h2>jQuery Slider</h2>
@@ -72,7 +72,7 @@
 			                                This is slide 3
 			                            </p>
 			                        </div>
-			                      <img src="images/3.jpg" alt="Slide 3"</li>
+			                      <img src="images/3.jpg" alt="Slide3">
 			                    <li class="slide">
 			                        <div class="caption">
 			                            <h2>jQuery Slider</h2>
@@ -80,7 +80,7 @@
 			                                This is slide 4
 			                            </p>
 			                        </div>
-			                      <img src="images/4.jpg" alt="Slide 4"</li>
+			                      <img src="images/4.jpg" alt="Slide4">
 
 			                    <li class="slide">
 			                        <div class="caption">
@@ -89,7 +89,7 @@
 			                                This is slide 1
 			                            </p>
 			                        </div>
-			                      <img src="images/1.jpg" alt="Slide 1"></li>
+			                      <img src="images/1.jpg" alt="Slide1">
 			                </ul>
 			                
 			                
@@ -139,25 +139,25 @@
 			  <ul>
 			    <li>
 			    	<div class="caption">
-			    		<h1>CSS Slider</h1>
+			    		<h2>CSS Slider</h2>
 			    		<h3>This is Slide 1</h3>
 			    	</div>
 			    </li>
 			    <li>
 			      <div class="caption">
-		    		<h1>CSS Slider</h1>
+		    		<h2>CSS Slider</h2>
 		    		<h3>This is Slide 2</h3>
 			    	</div>
 			    </li>
 			    <li>
 			      	<div class="caption">
-			    		<h1>CSS Slider</h1>
+			    		<h2>CSS Slider</h2>
 			    		<h3>This is Slide 3</h3>
 			    	</div>
 			    </li>
 			     <li>
 			      <div class="caption">
-			    		<h1>CSS Slider</h1>
+			    		<h2>CSS Slider</h2>
 			    		<h3>This is Slide 4</h3>
 			    	</div>
 			    </li>
@@ -206,7 +206,7 @@
     			</div>
 
 			    <div class="form-element">
-				    <label for="Phone">Phone</label>
+				    <label for= "phone" >Phone</label>
 				    <input type="text" name="phone" id="phone" placeholder="0123456789">
 				    <code id="errorPhone"></code>
 			    </div>
@@ -240,32 +240,32 @@
        <h3>HTML5 pattern form</h3>
 
     	<form method="post">
-			<div>
+			<div class="form-element">
 				<label>Name : </label>
 				<input type="text" placeholder="letters only / no space" pattern="[A-Za-z]+" title="only letters" required />
 			</div>
 
-			<div>
+			<div class="form-element">
 				<label>E-mail : </label>
 				<input type="email" placeholder="example@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="example@example.com" required />
 			</div>
 
-			<div>
+			<div class="form-element">
 				<label>website : </label>
-				<input type="url"  placeholder="http://nemanjakostic.com/Portfolio/"pattern="https?://.+" title="http://nemanjakostic.com/Portfolio/" required />
+				<input type="url"  placeholder="http://nemanjakostic.com/Portfolio/" pattern="https?://.+" title="http://nemanjakostic.com/Portfolio/" required />
 			</div>
 
-			<div>
+			<div class="form-element">
 				<label>pin code : </label>
 				<input type="text" placeholder="only numbers" pattern="[0-9]+" title="numbers only" required />
 			</div>
 
-			<div>
+			<div class="form-element">
 				<label>password : </label>
 				<input type="password" placeholder="at least 6 characters" pattern=".{6,}" title="Six or more characters" required />
 			</div>
 
-			<div>
+			<div class="form-element">
 				<label>phone no : </label>
 				<input type="tel" placeholder="10 digits" pattern="^\d{10}$" title="10 numeric characters only" required />
 			</div>
@@ -278,12 +278,11 @@
     </div>
     </div>
   </div>
-		</div>
 	</section>
 	<section>
 		<div class="text-center" id="buttonStar"> 
 			<h3>when you click button above i`ll fire AJAX request</h3>
-			<button class="zvezdica"><span id="star-five"></span>checkout<span id="star-five"></span></button>
+			<button class="zvezdica"><span class="star-five"></span>checkout<span class="star-five"></span></button>
 			<div class="showContent"></div>
 		</div>
 	</section>

@@ -299,8 +299,8 @@ textarea {
   top: 5px;
   bottom: 0;
   margin: auto;
-  max-width: 50px;
-  max-height: 50px;
+  max-width: 70px;
+  max-height: 70px;
   cursor: pointer; }
   .burger .burger__line-top {
     width: 100%;
@@ -560,9 +560,7 @@ header {
   background-image: url("../images/logo-mob.png");
   width: 203px;
   height: 70px;
-  position: absolute;
-    position-top: 50%;
-    position-margin-top: -35px; }
+  position: absolute; }
 
 .btn-burger {
   width: 52px;
@@ -781,8 +779,7 @@ header {
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; }
+    -ms-user-select: none; }
     .csslider > .navigation > div {
       margin-left: -100%; }
     .csslider > .navigation label {
@@ -813,8 +810,7 @@ header {
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; }
+    -ms-user-select: none; }
   .csslider.inside .navigation {
     bottom: 10px;
     margin-bottom: 10px; }
@@ -924,7 +920,7 @@ header {
   margin: 50px auto;
   text-transform: uppercase;
   display: block;
-  width: 200px;
+  width: 230px;
   height: 50px;
   border-radius: 5px;
   border: 3px solid black;
@@ -938,7 +934,7 @@ header {
     box-shadow: 1px 0px 0px 4px white, 1px 0px 0px 10px #71ad37;
     background-color: gold; }
 
-#star-five {
+.star-five {
   margin: 0 14px;
   position: relative;
   display: inline-block;
@@ -952,7 +948,7 @@ header {
   -webkit-transform: rotate(30.5deg);
   -ms-transform: rotate(30.5deg);
   -o-transform: rotate(30.5deg); }
-  #star-five:before {
+  .star-five:before {
     border-bottom: 12.5px solid gray;
     border-left: 4.25px solid transparent;
     border-right: 6.25px solid transparent;
@@ -967,7 +963,7 @@ header {
     -moz-transform: rotate(-25.5deg);
     -ms-transform: rotate(-25.5deg);
     -o-transform: rotate(-25.5deg); }
-  #star-five:after {
+  .star-five:after {
     position: absolute;
     display: block;
     color: red;

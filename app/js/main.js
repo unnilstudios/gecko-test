@@ -1,5 +1,4 @@
-/*global $, alert, console, setInterval, clearInterval*/
-/*jslint plusplus: true*/
+
 $(function () {
     'use strict';
     // Vars
@@ -89,7 +88,7 @@ $(function () {
         }
     });
 
-    // Lets Rock & Roll :D
+    // play the function
     letMeSlide();
 
 
@@ -119,30 +118,33 @@ $(function () {
     },
     afterActive: function() {
       // ES6
-      setTimeout(()=> {
+      
+     /* setTimeout(()=> {
         this.initial(0, 12, 45, 1.40);
         this.initial(1, -12, -45, 1.40);
         this.initial(2, 35, 0, 1);
         $burger.children().eq(2).css('opacity', '0');
         anim = true;
       }, 1300);
-      // With bind()
-      // setTimeout(function() {
-      //   this.initial(0, 12, 45, 1.40);
-      //   this.initial(1, -12, -45, 1.40);
-      //   this.initial(2, 35, 0, 1);
-      //   $burger.children().eq(2).css('opacity', '0');
-      //   anim = true;
-      // }.bind(this), 1300);
+
+*/
+       // With bind()
+      setTimeout(function() {
+        this.initial(0, 12, 45, 1.40);
+        this.initial(1, -12, -45, 1.40);
+        this.initial(2, 35, 0, 1);
+        $burger.children().eq(2).css('opacity', '0');
+         anim = true;
+      }.bind(this), 1000);
     },
     beforeReverse: function() {
-      setTimeout(()=> {
+      setTimeout(function() {
         for (var i = 0; i <= 2; i++) {
           this.initial(i, 0, 0, 1);
         }
         $burger.children().eq(2).css('opacity', '1');
         anim = false;
-      }, 1300);
+      }.bind(this), 1000);
     }
   }
 
@@ -159,7 +161,7 @@ $(function () {
   // menu
  
 
-// pills
+
 
 
 //register form
